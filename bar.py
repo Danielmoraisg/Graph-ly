@@ -3,7 +3,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.graph_objects import Layout
 
-from plotly.io import write_image
+from pathlib import Path
+import os
+import base64
 
 def app(state):
 	#configs basicas
