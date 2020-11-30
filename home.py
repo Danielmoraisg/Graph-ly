@@ -14,7 +14,7 @@ def app(state):
 			state.data = pd.read_excel(upload)
 			st.write(state.data.head())
 			st.write(state.data.tail())
-	upload.seek(0)
+		upload.seek(0)
 	#st.write(df.data)
 
 		
