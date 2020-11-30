@@ -7,7 +7,7 @@ def app(state):
 	st.write('Click the button below to add your dataset and check if your data is correct')
 	upload = st.file_uploader('',accept_multiple_files = False)
 
-	if st.checkbox('Download'):
+	if st.checkbox('Download templates'):
 		def get_binary_file_downloader_html(bin_file, file_label='File'):
 			with open(bin_file, 'rb') as f:
 				data = f.read()
