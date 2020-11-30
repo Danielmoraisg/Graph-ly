@@ -33,7 +33,7 @@ File from a [gist](https://gist.github.com/okld/0aba4869ba6fdc8d49132e6974e2e662
 
 File to deploy the app. It was created using [pipreqs](https://pypi.org/project/pipreqs/)
 
-## templates
+## Templates
 
 * template.txt
 
@@ -41,4 +41,4 @@ File to deploy the app. It was created using [pipreqs](https://pypi.org/project/
 
 * template.xlsx
 
-files containing structured data to guide users on how their data should be structured in order to be compatible with the aplication
+Files containing structured data to guide users on how their data should be structured in order to be compatible with the aplication
