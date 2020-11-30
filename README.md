@@ -1,4 +1,6 @@
 # Graph-ly
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/yourGitHubName/yourRepo/yourApp/)
+
 This is an app to plot data
 
 ## This app was developed using [streamlit](https://www.streamlit.io) package
