@@ -27,10 +27,10 @@ def app(state):
     fig.update_xaxes(showgrid = True,showline=True, linewidth=2, linecolor='black', title_text = xtitle)
     fig.update_yaxes(showgrid = True,showline=True, linewidth=2, linecolor='black', title_text = ytitle)
     fig.update_layout(title_x=0.5)
-    if st.button('WORK IN PROGRESS'):
-    	fig.write_html('teste.html')
-    else:
-    	a = 1
+    #if st.button('WORK IN PROGRESS'):
+    #	fig.write_html('teste.html')
+    #else:
+    #	a = 1
     st.plotly_chart(fig, use_container_width=True)
 
 

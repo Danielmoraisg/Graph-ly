@@ -1,7 +1,7 @@
 import streamlit as st 
 import pandas as pd
 def app(state):
-	st.title('This is the homepage')
+	st.title('Creating Plots')
 	st.write('Click the button below to add your dataset and check if your data is correct')
 	upload = st.file_uploader('',accept_multiple_files = False)
 	if upload is not None:
