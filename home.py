@@ -9,7 +9,9 @@ def app(state):
 		if state.name.split('.')[1] == 'xlsx' or state.name.split('.')[1] == 'xls' :
 			#state.data = pd.read_excel(upload)
 			data = upload.read()
-			state.data = pd.read_excel(data)
+			excel = pd.ExcelFile(data)
+			sheet = st.selectbox('Sheet from excel file to be used',excel.sheet_names)
+			state.data = pd.read_excel(data, sheet_name = sheet)
 			#st.write(pd.read_excel(state.data))
 			st.write(state.data.head())
 			st.write(state.data.tail())
