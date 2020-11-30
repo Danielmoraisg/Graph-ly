@@ -8,10 +8,12 @@ def app(state):
 		state.name = upload.name
 		if state.name.split('.')[1] == 'csv':
 			state.data = pd.read_csv(upload)
+			st.write(state.data.head())
+			st.write(state.data.tail())
 		elif state.name.split('.')[1] == 'xlsx':
 			state.data = pd.read_excel(upload)
-		st.write(state.data.head())
-		st.write(state.data.tail())
+			st.write(state.data.head())
+			st.write(state.data.tail())
 	#st.write(df.data)
 
 		
