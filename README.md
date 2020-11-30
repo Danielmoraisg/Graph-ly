@@ -29,7 +29,16 @@ File to run the page that creates a Bar plot from the dataset still not ready
 
 File from a [gist](https://gist.github.com/okld/0aba4869ba6fdc8d49132e6974e2e662) from [okld](https://gist.github.com/okld) to maintain variables between pages on the app
 
-
-# requiriments.txt
+## requiriments.txt
 
 File to deploy the app. It was created using [pipreqs](https://pypi.org/project/pipreqs/)
+
+## templates
+
+* template.txt
+
+* template.csv
+
+* template.xlsx
+
+files containing structured data to guide users on how their data should be structured in order to be compatible with the aplication
