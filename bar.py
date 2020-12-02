@@ -28,14 +28,11 @@ def app(state):
     fig.update_xaxes(showgrid = True,showline=True, linewidth=2, linecolor='black', title_text = xtitle)
     fig.update_yaxes(showgrid = True,showline=True, linewidth=2, linecolor='black', title_text = ytitle)
     fig.update_layout(title_x=0.5)
-    #if st.button('WORK IN PROGRESS'):
-    #	fig.write_html('teste.html')
-    #else:
-    #	a = 1
+
     st.plotly_chart(fig, use_container_width=True)
     def img_to_bytes(img_path):
     	img_bytes = Path(img_path).read_bytes()
     	encoded = base64.b64encode(img_bytes).decode()
     	return encoded
-    fig_html = "To download the plot click the camera icon <img src='data:image/png;base64,{}' width='18' height='15' class='img-fluid'>".format(img_to_bytes('images/download_icon.png'))
+    fig_html = "To download the plot click the camera icon <img src='data:image/png;base64,{}' width='18' height='15' class='img-fluid'>".format(img_to_bytes(r'images\download_icon.png'))
     st.markdown(fig_html, unsafe_allow_html=True)

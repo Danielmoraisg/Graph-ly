@@ -9,12 +9,10 @@ import base64
 
 def app(state):
 	#configs basicas
-    st.title('Bar Plot')
+    st.title('Multiple Lines Plot')
     Y = st.selectbox('Column to be mapped on the Y axis',state.data.columns)
     X = st.selectbox('Column to be mapped on the X axis',state.data.columns)
-    color = st.selectbox('Specify columns to differ bar color',state.data.columns)
-    modes = {'Groups':'group', 'Stacked':'stack','Overlay':'overlay','Relative positioning':'relative'}
-    mode = st.selectbox('How to display different groups', list(modes.keys()))
+    color = st.selectbox('Specify columns to differ line color',state.data.columns)
     title = st.text_input("Title",state.name[0:-4])    
     #advanced configs
     xtitle = X
@@ -25,8 +23,8 @@ def app(state):
     	ytitle = st.text_input('Y Title', Y)
     	xtitle = st.text_input('X Title', X)
 
-    fig = px.bar(state.data, x=X, y=Y, title=title,template = 'plotly_white', color = color, barmode = modes[mode])
-
+    fig = px.line(state.data, x=X, y=Y, title=title,template = 'plotly_white', color = color)
+    fig.update_traces(mode = 'lines+markers', marker_symbol = 'square')
     fig.update_xaxes(showgrid = True,showline=True, linewidth=2, linecolor='black', title_text = xtitle)
     fig.update_yaxes(showgrid = True,showline=True, linewidth=2, linecolor='black', title_text = ytitle)
     fig.update_layout(title_x=0.5, bargap = 0.2, bargroupgap=0.1)

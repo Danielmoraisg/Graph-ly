@@ -23,7 +23,6 @@ def app(state):
     	xtitle = st.text_input('X Title', X)
 
 
-
     fig = px.scatter(state.data, x=X, y=Y, title=title,template = 'plotly_white')
     fig.update_traces(mode = 'lines+markers', marker_symbol = 'square')
     fig.update_xaxes(showgrid = True,showline=True, linewidth=2, linecolor='black', title_text = xtitle)
@@ -39,11 +38,7 @@ def app(state):
     	img_bytes = Path(img_path).read_bytes()
     	encoded = base64.b64encode(img_bytes).decode()
     	return encoded
-    fig_html = "To download the plot click the camera icon <img src='data:image/png;base64,{}' width='18' height='15' class='img-fluid'>".format(img_to_bytes(r'images/download_icon.png'))
+    fig_html = "To download the plot click the camera icon <img src='data:image/png;base64,{}' width='18' height='15' class='img-fluid'>".format(img_to_bytes(r'images\download_icon.png'))
     st.markdown(fig_html, unsafe_allow_html=True)
 
 
-    #fig = plt.figure()
-    #plt.plot(state.data[X],state.data[Y],'b')
-    #plt.plot(state.data[X],state.data[Y],'bo')
-    #st.pyplot(fig)

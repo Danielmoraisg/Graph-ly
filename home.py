@@ -44,13 +44,11 @@ def app(state):
 				st.write(state.data)
 			else:
 				state.data = pd.read_excel(data, sheet_name = sheet)
-				#st.write(pd.read_excel(state.data))
 				st.write(state.data)
 
 		elif state.name.split('.')[1] == 'csv' or state.name.split('.')[1] == 'txt' :
 			state.data = pd.read_csv(upload)
 			st.write(state.data)
 		upload.seek(0)
-	#st.write(df.data)
 
 		
