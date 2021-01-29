@@ -7,7 +7,6 @@ import bar
 import line
 import multi_bar
 import multi_line
-import test
 st.set_page_config(page_title="Graph-ly",page_icon=":fire:",layout="centered",initial_sidebar_state="auto")
 state = _get_state()
 
@@ -16,8 +15,7 @@ PAGES = {
     "Line Chart": line,
     "Bar Chart": bar,
     "Multiple Bars Chart":multi_bar,
-    'Multipel Lines Chart':multi_line,
-	'Test':test
+    'Multipel Lines Chart':multi_line
 }
 st.sidebar.title('Navigation')
 selection = st.sidebar.radio("Go to", list(PAGES.keys()))
