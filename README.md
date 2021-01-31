@@ -11,7 +11,7 @@ To run the app go to the folder with the app and "run streamlit run main.py"
 
 ## Main.py
 
-File to runn the aplication
+File to run the aplication
 
 ## home.py
 
@@ -31,7 +31,7 @@ File from a [gist](https://gist.github.com/okld/0aba4869ba6fdc8d49132e6974e2e662
 
 ## requiriments.txt
 
-File to deploy the app. It was created using [pipreqs](https://pypi.org/project/pipreqs/)
+File to deploy the app containing all packages needed. It was created using [pipreqs](https://pypi.org/project/pipreqs/)
 
 ## Templates
 
